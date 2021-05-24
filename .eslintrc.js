@@ -46,6 +46,14 @@ module.exports = {
       }
     ],
 
+    // This combination of rules is the result of "React was defined before
+    // it was used". The issue is with @typescript-eslint not being
+    // compatible with 3rd party dependencies like CRA. For more, see here:
+    // https://github.com/typescript-eslint/typescript-eslint/issues/2540
+    // This workaround will only work for Typescript...
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+
     // This groups 3rd-party packages together, then groups internal @
     // alias modules with "../" type files.
     'simple-import-sort/imports': [
