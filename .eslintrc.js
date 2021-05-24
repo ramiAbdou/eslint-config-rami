@@ -54,6 +54,10 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
 
+    // Similar reasoning to above...
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+
     // Allows JSX in .tsx files.
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
 
