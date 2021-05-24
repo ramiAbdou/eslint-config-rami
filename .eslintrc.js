@@ -3,13 +3,20 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
-    'prettier',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { project: './tsconfig.json' },
-  plugins: ['jest', 'simple-import-sort', 'sort-keys-fix'],
+  plugins: ['import', 'jest', 'simple-import-sort', 'sort-keys-fix'],
   rules: {
+    // Fixes the "missing file extension" error.
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      { js: 'never', ts: 'never', tsx: 'never' }
+    ],
+
     // Requires a newline after imports.
     'import/newline-after-import': 'error',
 
