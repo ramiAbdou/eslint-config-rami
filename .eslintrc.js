@@ -54,6 +54,9 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
 
+    // Allows JSX in .tsx files.
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
+
     // This groups 3rd-party packages together, then groups internal @
     // alias modules with "../" type files.
     'simple-import-sort/imports': [
