@@ -20,6 +20,12 @@ module.exports = {
     // Requires a newline after imports.
     'import/newline-after-import': 'error',
 
+    // Don't require modules in .test files to be listed in "dependencies".
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.ts', '**/*.test.tsx'] }
+    ],
+
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: 'multiline-const', next: '*' },
